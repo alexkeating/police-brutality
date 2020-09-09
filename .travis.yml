@@ -13,7 +13,5 @@ jobs:
   include:
     - stage: build_data
       python: 3.7
-      if: type = pull_request
-      branch:
-        only: master
+      if: brach = master
       script: scripts/build_data
