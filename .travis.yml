@@ -1,3 +1,8 @@
+dist: xenial
+language: python
+
+cache: pip
+
 stages:
   - build_data
 
@@ -6,6 +11,7 @@ install:
 
 jobs:
   include:
-    - stage: Build_data
+    - stage: build_data
       python: 3.7
       if: branch = master
+      script: scripts/build_data
