@@ -13,5 +13,6 @@ jobs:
   include:
     - stage: build_data
       python: 3.7
-      if: branch = master
+      branch:
+        only: master
       script: scripts/build_data

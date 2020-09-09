@@ -14,8 +14,8 @@ git config --global user.email $name
 
 cp -rT $ tools/data_build $tmp_dir
 git checkout data_build
-cp -rT $tmp_dir ./
-rm -rf $tmp_dir
+cp -rT $tmp_dir/ ./
+rm -rf $tmp_dir/
 git add .
 git commit -m "Update data_build to output generated at $TRAVIS_COMMIT"
 git push
