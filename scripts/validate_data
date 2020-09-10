@@ -11,6 +11,6 @@ git add reports
 git config --local user.email "action@github.com"
 git config --local user.name "GitHub Action"
 # git remote set-url origin https://x-access-token:${{ secrets.UBERSHMEKEL_ALT_TOKEN }}@github.com/${{ github.repository }}
-git checkout $TRAVIS_Branch
+git checkout $TRAVIS_BRANCH
 git commit -m "Automated data fixes" -a | exit 0
 git push
