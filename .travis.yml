@@ -4,14 +4,13 @@ language: python
 cache: pip
 
 stages:
-  - build_data
+  - validate_data
 
 install:
   - scripts/install
 
 jobs:
   include:
-    - stage: build_data
+    - stage: validate_data
       python: 3.7
-      if: branch = master AND type = push
-      script: scripts/build_data
+      script: scripts/validate_data
